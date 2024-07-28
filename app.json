@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Guess My Number",
-    "slug": "Guess My Number",
+    "slug": "guess-my-number",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
