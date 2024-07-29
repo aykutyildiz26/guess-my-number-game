@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, ImageBackground, SafeAreaView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 
 import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
@@ -9,14 +10,33 @@ import GameOverScreen from "./screens/GameOverScreen";
 
 import Colors from "./constants/color";
 
+// Splash screen'in otomatik olarak gizlenmesini engelle
+SplashScreen.preventAutoHideAsync();
+
 export default function App() {
   const [userNumber, setUserNumber] = useState();
   const [gameIsOver, setGameIsOver] = useState(true);
+  const [appIsReady, setAppIsReady] = useState(false);
 
-  useFonts({
+  const [fontsLoaded] = useFonts({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
     "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
   });
+
+  useEffect(() => {
+    async function prepare() {
+      if (fontsLoaded) {
+        setAppIsReady(true);
+
+        await SplashScreen.hideAsync();
+      }
+    }
+    prepare();
+  }, [fontsLoaded]);
+
+  if (!appIsReady) {
+    return null;
+  }
 
   const pickedNumberHandler = (pickedNumber) => {
     setUserNumber(pickedNumber);
@@ -60,7 +80,6 @@ const styles = StyleSheet.create({
   rootScreen: {
     flex: 1,
   },
-
   backgroundImage: {
     opacity: 0.15,
   },
