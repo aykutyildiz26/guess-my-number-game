@@ -1,6 +1,17 @@
-# Welcome to your Expo app 👋
+# Guess My Number
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple "Guess My Number" game built with React Native. The player thinks of a number between 1 and 100, and the app tries to guess the number. The player provides feedback on whether the guess is too high or too low, and the app adjusts its guesses accordingly. The game ends when the app correctly guesses the number and displays the number of attempts it took.
+
+## Installation
+
+To get started with the project, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/aykutyildiz26/guess-my-number-game.git
+   cd guess-my-number
+   ```
 
 ## Get started
 
@@ -16,35 +27,16 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Installation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Think of a number between 1 and 100.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+2. The app will start guessing your number.
 
-## Get a fresh project
+3. Provide feedback to the app by indicating whether the guess is too high, too low, or correct.
 
-When you're ready, run:
+4. The game ends when the app correctly guesses your number and displays the number of attempts it took.
 
-```bash
-npm run reset-project
-```
+## Installation
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Contributions are welcome! If you have any ideas or improvements, feel free to open an issue or submit a pull request.
