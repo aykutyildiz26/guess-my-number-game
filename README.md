@@ -37,6 +37,6 @@ To get started with the project, follow these steps:
 
 4. The game ends when the app correctly guesses your number and displays the number of attempts it took.
 
-## Installation
+## Contributing
 
 Contributions are welcome! If you have any ideas or improvements, feel free to open an issue or submit a pull request.
